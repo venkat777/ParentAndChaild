@@ -1,25 +1,145 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EuA-3R-xjR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="YkS-NY-VP2">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <navigationController id="EuA-3R-xjR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EHs-3f-I3N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m1S-eL-Fjl" kind="relationship" relationship="rootViewController" id="MvD-cr-qW0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MrE-Mj-0le" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-760" y="932"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iyA-uB-wmb">
+            <objects>
+                <viewController id="m1S-eL-Fjl" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="neS-yT-djU"/>
+                        <viewControllerLayoutGuide type="bottom" id="AEa-zK-iR1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="EeL-fk-dDd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nET-CC-HUR" userLabel="PhotoContainer View">
+                                <rect key="frame" x="0.0" y="104" width="600" height="496"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pk-RZ-adq" userLabel="VideoContainer View">
+                                <rect key="frame" x="0.0" y="104" width="600" height="496"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdj-kD-JbH" userLabel="OtherContainer View">
+                                <rect key="frame" x="0.0" y="104" width="600" height="496"/>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lEo-BQ-iHs">
+                                <rect key="frame" x="20" y="72" width="560" height="29"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="neX-qK-SMp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Photo"/>
+                                    <segment title="Video"/>
+                                    <segment title="Other"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="showComponent:" destination="m1S-eL-Fjl" eventType="valueChanged" id="Rey-YR-kB2"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Pk-RZ-adq" firstAttribute="top" secondItem="lEo-BQ-iHs" secondAttribute="bottom" constant="4" id="6bF-pw-0Dd"/>
+                            <constraint firstAttribute="trailing" secondItem="zdj-kD-JbH" secondAttribute="trailing" id="81X-C9-Lad"/>
+                            <constraint firstItem="nET-CC-HUR" firstAttribute="leading" secondItem="EeL-fk-dDd" secondAttribute="leading" id="AJU-K8-Jq5"/>
+                            <constraint firstItem="AEa-zK-iR1" firstAttribute="top" secondItem="nET-CC-HUR" secondAttribute="bottom" id="Bvd-JY-55E"/>
+                            <constraint firstItem="lEo-BQ-iHs" firstAttribute="top" secondItem="neS-yT-djU" secondAttribute="bottom" constant="8" id="D48-M7-Jzx"/>
+                            <constraint firstAttribute="trailing" secondItem="3Pk-RZ-adq" secondAttribute="trailing" id="T52-nB-TIa"/>
+                            <constraint firstItem="nET-CC-HUR" firstAttribute="top" secondItem="lEo-BQ-iHs" secondAttribute="bottom" constant="4" id="UJ4-KZ-1jI"/>
+                            <constraint firstAttribute="trailing" secondItem="nET-CC-HUR" secondAttribute="trailing" id="UoP-jI-aiS"/>
+                            <constraint firstItem="AEa-zK-iR1" firstAttribute="top" secondItem="3Pk-RZ-adq" secondAttribute="bottom" id="cpF-c1-SBp"/>
+                            <constraint firstItem="zdj-kD-JbH" firstAttribute="top" secondItem="lEo-BQ-iHs" secondAttribute="bottom" constant="4" id="eTh-hr-qy5"/>
+                            <constraint firstItem="zdj-kD-JbH" firstAttribute="leading" secondItem="EeL-fk-dDd" secondAttribute="leading" id="fPn-M2-exS"/>
+                            <constraint firstItem="lEo-BQ-iHs" firstAttribute="leading" secondItem="EeL-fk-dDd" secondAttribute="leading" constant="20" id="gLH-qM-0KY"/>
+                            <constraint firstAttribute="trailing" secondItem="lEo-BQ-iHs" secondAttribute="trailing" constant="20" id="gsu-dZ-qD0"/>
+                            <constraint firstItem="AEa-zK-iR1" firstAttribute="top" secondItem="zdj-kD-JbH" secondAttribute="bottom" id="jcx-hL-FUN"/>
+                            <constraint firstItem="3Pk-RZ-adq" firstAttribute="leading" secondItem="EeL-fk-dDd" secondAttribute="leading" id="plE-eZ-Pgr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nX4-HM-C1f"/>
+                    <connections>
+                        <outlet property="containerView" destination="nET-CC-HUR" id="FZf-9A-XY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6es-lo-5O2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="325"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m3k-PU-vQb">
+            <objects>
+                <viewController storyboardIdentifier="Photo" id="W3m-Lv-FCD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XgA-kA-y1f"/>
+                        <viewControllerLayoutGuide type="bottom" id="oF1-ml-8Yq"/>
+                    </layoutGuides>
+                    <view key="view" tag="1" contentMode="scaleToFill" id="9W3-N3-Y6s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.35770134949999999" green="1" blue="0.32136132670000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEl-TZ-F9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="752" y="284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uSn-Ap-mWo">
+            <objects>
+                <viewController storyboardIdentifier="Video" id="V8h-vQ-Lbd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Zp-wo-1Ju"/>
+                        <viewControllerLayoutGuide type="bottom" id="pFj-fK-BAq"/>
+                    </layoutGuides>
+                    <view key="view" tag="2" contentMode="scaleToFill" id="wxR-T2-nKV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.34582795430000002" green="0.42736865429999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkU-EU-lwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="1087"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KDD-LV-Lq3">
+            <objects>
+                <viewController storyboardIdentifier="Other" id="66H-69-Zd7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LQk-Gu-11u"/>
+                        <viewControllerLayoutGuide type="bottom" id="5tX-Hd-LyE"/>
+                    </layoutGuides>
+                    <view key="view" tag="3" contentMode="scaleToFill" id="dMz-nL-Czd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="duZ-Hp-Jfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795" y="1151"/>
         </scene>
     </scenes>
 </document>
