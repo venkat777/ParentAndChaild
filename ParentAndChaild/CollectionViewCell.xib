@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11760" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="JCV-6a-Z7H" customClass="CollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="106" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="106" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6sx-V7-57r">
+                        <rect key="frame" x="0.0" y="0.0" width="106" height="94"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6sx-V7-57r" firstAttribute="leading" secondItem="JCV-6a-Z7H" secondAttribute="leading" id="9fZ-GX-z0E"/>
+                <constraint firstAttribute="trailing" secondItem="6sx-V7-57r" secondAttribute="trailing" id="M05-TG-XGy"/>
+                <constraint firstAttribute="bottom" secondItem="6sx-V7-57r" secondAttribute="bottom" id="Pwd-OL-H5s"/>
+                <constraint firstItem="6sx-V7-57r" firstAttribute="top" secondItem="JCV-6a-Z7H" secondAttribute="top" id="xdu-zI-gQ7"/>
+            </constraints>
+            <size key="customSize" width="106" height="94"/>
+            <connections>
+                <outlet property="imageView1" destination="6sx-V7-57r" id="le2-XG-nfn"/>
+            </connections>
+            <point key="canvasLocation" x="-288" y="-278"/>
+        </collectionViewCell>
+    </objects>
+</document>
