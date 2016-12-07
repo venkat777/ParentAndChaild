@@ -9,5 +9,5 @@
 #import "CollectionViewCell.h"
 
 @implementation CollectionViewCell
-@synthesize imageView1;
+@synthesize imageView;
 @end

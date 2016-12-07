@@ -10,6 +10,7 @@
 #import "CollectionViewCell.h"
 
 @interface PhotoViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *ChoosenImageView;
 
 @end
 
@@ -24,10 +25,27 @@
     self.CollectionView.delegate=self;
     self.CollectionView.dataSource =self;
     self.CollectionView.backgroundColor = [UIColor whiteColor];
+    self.CollectionView.layer.borderWidth=1;
+    self.CollectionView.layer.borderColor=[UIColor lightGrayColor].CGColor;
+    self.CollectionView.layer.cornerRadius=5;
+
+    
+    self.ChoosenImageView.layer.borderWidth=1;
+    self.ChoosenImageView.layer.borderColor =[UIColor darkGrayColor].CGColor;
+    self.ChoosenImageView.layer.cornerRadius=5;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    if(!_ChoosenImageView.image)
+        _ChoosenImageView.backgroundColor=[UIColor lightGrayColor];
+    else
+        _ChoosenImageView.backgroundColor=[UIColor blackColor];
 
+        
+    [super viewWillAppear:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -47,7 +65,8 @@
      static NSString *identifier = @"PhotoCell";
     CollectionViewCell *cell= (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     cell.backgroundColor=[UIColor whiteColor];
-    cell.imageView1.backgroundColor=[UIColor grayColor];
+    cell.imageView.backgroundColor=[UIColor grayColor];
+    cell.imageView.image=self.ChoosenImageView.image;
     return cell;
 }
 -(IBAction)selectPhotoGalery:(id)sender
@@ -68,12 +87,31 @@
 {
     UIImagePickerController *imagePicker =[[UIImagePickerController alloc] init];
     imagePicker.delegate=self;
-    imagePicker.editing=YES;
+    imagePicker.allowsEditing=YES;
     imagePicker.sourceType=sourceType;
     [self presentViewController:imagePicker animated:YES completion:nil];
     
 }
+#pragma UIImagePickerDelegate methods
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage *chooseimage=info[UIImagePickerControllerEditedImage];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self uploadProfileImage:chooseimage];
+    }];
+}
+
+- (void)uploadProfileImage:(UIImage *)image
+{
+     self.ChoosenImageView.image = [image copy];
+    _ChoosenImageView.backgroundColor=[UIColor blackColor];
+
+}
 /*
 #pragma mark - Navigation
 

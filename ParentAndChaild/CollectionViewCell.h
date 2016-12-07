@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CollectionViewCell : UICollectionViewCell
-@property (nonatomic,strong) IBOutlet UIImageView *imageView1;
+@property (nonatomic,strong) IBOutlet UIImageView *imageView;
 
 @end

@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/venkataramana/Downloads/ParentAndChaild/ParentAndChaild/main.m \
-  /Users/venkataramana/Downloads/ParentAndChaild/ParentAndChaild/AppDelegate.h
+  /Users/venkataramana/Dropbox/GithudRepo/ParentAndChaild/ParentAndChaild/main.m \
+  /Users/venkataramana/Dropbox/GithudRepo/ParentAndChaild/ParentAndChaild/AppDelegate.h

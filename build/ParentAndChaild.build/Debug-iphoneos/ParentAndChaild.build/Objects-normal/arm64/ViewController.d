@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/venkataramana/Downloads/ParentAndChaild/ParentAndChaild/ViewController.m \
-  /Users/venkataramana/Downloads/ParentAndChaild/ParentAndChaild/ViewController.h
+  /Users/venkataramana/Dropbox/GithudRepo/ParentAndChaild/ParentAndChaild/ViewController.m \
+  /Users/venkataramana/Dropbox/GithudRepo/ParentAndChaild/ParentAndChaild/ViewController.h

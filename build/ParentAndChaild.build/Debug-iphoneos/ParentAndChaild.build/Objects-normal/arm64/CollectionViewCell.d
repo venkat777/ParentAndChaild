@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/venkataramana/Downloads/ParentAndChaild/ParentAndChaild/CollectionViewCell.m \
-  /Users/venkataramana/Downloads/ParentAndChaild/ParentAndChaild/CollectionViewCell.h
+  /Users/venkataramana/Dropbox/GithudRepo/ParentAndChaild/ParentAndChaild/CollectionViewCell.m \
+  /Users/venkataramana/Dropbox/GithudRepo/ParentAndChaild/ParentAndChaild/CollectionViewCell.h

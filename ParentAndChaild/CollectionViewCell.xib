@@ -33,9 +33,9 @@
             </constraints>
             <size key="customSize" width="106" height="94"/>
             <connections>
-                <outlet property="imageView1" destination="6sx-V7-57r" id="le2-XG-nfn"/>
+                <outlet property="imageView" destination="6sx-V7-57r" id="vjF-6m-L9n"/>
             </connections>
-            <point key="canvasLocation" x="-288" y="-278"/>
+            <point key="canvasLocation" x="-48" y="-275"/>
         </collectionViewCell>
     </objects>
 </document>
