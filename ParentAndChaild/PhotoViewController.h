@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GSFEImagePickerProtocol.h"
 
-@interface PhotoViewController : UIViewController
+@interface PhotoViewController : UIViewController<GSFEImagePickerProtocol>
 {
  
 }
+@property(nonatomic,weak) id<GSFEImagePickerProtocol> delegate;
 @property (nonatomic,weak) IBOutlet UICollectionView *CollectionView;
 @end

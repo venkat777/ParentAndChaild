@@ -4,11 +4,15 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		ykFqnGisUPqn/2m9yVpds2sKY98=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			A9u4C2xUNAU5WhqOfKs1EX1kuFA=
+			1rZkJtgvnJcbgnfmm6K5eX0hB6U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -26,7 +30,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			epcEg2NXCKO/NAvcpa/U8VLaOuU=
+			Pd9baiWyRl4Cal8Be2+LCiqDSwE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -35,7 +39,25 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BZiJFFlhYhsvWkZ1O8afeBl+c50=
+			NnMzvr59vT3v9GlGPZTc3L9qEaI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/AlbumListVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NEqC88g1sVfPLoa4DnMuNKSsqH4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/CollectionList.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WovNXL1okcHCuFGeisuINJ1qZpo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -44,7 +66,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eguTkdkW+ig+jIN/gGXcOCFWJVM=
+			1pXbJnM0nLLHmg8axYqUS3h23WQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/Op4-5Q-5ZU-view-4Ie-Nw-Syj.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JZxWy64nURZut1oMEicvylsUKDY=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -53,7 +84,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ODIrVAlcpKlNZYRHHhrLgRThVTk=
+			bLiPl4niEkXyfbjTXcyOPawGUE8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -62,7 +93,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v9oswSMd2bU5OfTAi+DvzWcRiew=
+			Wq/nJl5ddpBE+aT/a/qFjqbWQos=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -71,7 +102,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1iJwacwdC6AptiMPJALWCXh607Q=
+			0uXZvQOk6hhplBtEt1JwNyToa8U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -80,7 +111,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFSqmUKTabCv7FckaMcVvTm46ko=
+			LLvagvHL25PhbqZgvhyN2tM9vtk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -89,7 +120,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8tV7KViOKBfML9gWEoEmWYexql0=
+			2EG6ILqQxQRwks2IB8hysbxJq0Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -98,7 +129,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			veRBKylPegYUhg6ifKgoe05BJU8=
+			DuVGksp89KYVC7xJ/3VFG/eM9Xk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -107,18 +138,27 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AbNXwEAIfZEjhto3Amd7el8MdLg=
+			rCuB9jbtoaMJQsZesi4iCqLRuNM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/trR-f8-nKZ-view-JeR-f8-i1N.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			55gLphJrZA6Q+nZoUuXDR9apqoA=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>CollectionViewCell.nib</key>
 		<data>
-		2DYr+rv6abrHMeuBpS+A/dGO/Aw=
+		BNsy0E8FGh+o6y3WehA5uBllHTw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FobLEYlu0MsOJC016QdsZj1TKBk=
+		v0dS2KcO3ISekE8K0j6Qh/g95sY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -135,15 +175,26 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ykFqnGisUPqn/2m9yVpds2sKY98=
+			</data>
+			<key>hash2</key>
+			<data>
+			5Pin5ea8tx6KqVqkH7glSywteRkz08Vbiuc5Siv4U2Q=
+			</data>
+		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			A9u4C2xUNAU5WhqOfKs1EX1kuFA=
+			1rZkJtgvnJcbgnfmm6K5eX0hB6U=
 			</data>
 			<key>hash2</key>
 			<data>
-			tJQjXpFjLLc9Ug+EeTcfcno6OWghNQwXyxUyqM/Jgls=
+			tWhmqb5amXtjsiOiBCPBYt5r7z3WZEi1kNVgfaDNtVE=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -165,11 +216,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			epcEg2NXCKO/NAvcpa/U8VLaOuU=
+			Pd9baiWyRl4Cal8Be2+LCiqDSwE=
 			</data>
 			<key>hash2</key>
 			<data>
-			BW9PDytylnkhuzI6wGfIv92cxfLHX3HiLXD/pETlCfE=
+			rNke0fdsf0EonkUqa9UmK2rFa7yo6WDtrIpNnVLPto0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -178,11 +229,37 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BZiJFFlhYhsvWkZ1O8afeBl+c50=
+			NnMzvr59vT3v9GlGPZTc3L9qEaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			6UY/cQ2kAjEwo/VEkSY3J44676A85bvFXxrmH9Hq+FY=
+			ZLd3O7Z+RY7tKNFQVhLMCcTE1dfh2AIlDoaJvzx117k=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/AlbumListVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NEqC88g1sVfPLoa4DnMuNKSsqH4=
+			</data>
+			<key>hash2</key>
+			<data>
+			C0ubP6xqjCSINReQ2mvS9Dj2cjelbUz3eKUStxOurSw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/CollectionList.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WovNXL1okcHCuFGeisuINJ1qZpo=
+			</data>
+			<key>hash2</key>
+			<data>
+			TiJJXyBqwZZTQ+KPPRDdlEZvpVgNJqePuRxJKFdMXlk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -191,11 +268,24 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eguTkdkW+ig+jIN/gGXcOCFWJVM=
+			1pXbJnM0nLLHmg8axYqUS3h23WQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			TGqvGZYjyn58yfnSKik/EhewkbaVTeB33vNSuM6WbZw=
+			ObnfLeCW5DaiTKdoQkio/iGYNGeBYJE1AhfPDOw+ed4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/Op4-5Q-5ZU-view-4Ie-Nw-Syj.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JZxWy64nURZut1oMEicvylsUKDY=
+			</data>
+			<key>hash2</key>
+			<data>
+			SpmaXxKtcFA5LM++94RmMv+hXQq11qq6xroxd4/2W94=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -204,11 +294,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ODIrVAlcpKlNZYRHHhrLgRThVTk=
+			bLiPl4niEkXyfbjTXcyOPawGUE8=
 			</data>
 			<key>hash2</key>
 			<data>
-			G89aUfpQc+hxgu+izELqYcYap19LbltcqoBzlv1z4qs=
+			Qf0ZKe7HaVgBbNWnfe/cKiV48BQAhRQdMJiRGn/uRnM=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -217,11 +307,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v9oswSMd2bU5OfTAi+DvzWcRiew=
+			Wq/nJl5ddpBE+aT/a/qFjqbWQos=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZYuyx0xDXSs6KFB3LM+URyROO1zph7Ytn280XQ8o6wQ=
+			ZXBDoX/NyXRp2soc+pfgyDSvydfJi9d03VJj2lFQ4j4=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -230,11 +320,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1iJwacwdC6AptiMPJALWCXh607Q=
+			0uXZvQOk6hhplBtEt1JwNyToa8U=
 			</data>
 			<key>hash2</key>
 			<data>
-			vK749BvylpzBB6cxsp9QopzfiGJLTZVoPT/2/Wh1dYA=
+			wxT95AgU3Z6hmkET+Gw6SN+bQ+NjZLIBfInAgpWLbu0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -243,11 +333,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bFSqmUKTabCv7FckaMcVvTm46ko=
+			LLvagvHL25PhbqZgvhyN2tM9vtk=
 			</data>
 			<key>hash2</key>
 			<data>
-			rNHK8YINGZpaEe3PuMA+tWSBkn7Nfq9TXV/J9mMgvkE=
+			rbgxEwAs/yg10NoQiWeRdlXDiV0nK1cm/I3pBGeejO0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -256,11 +346,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8tV7KViOKBfML9gWEoEmWYexql0=
+			2EG6ILqQxQRwks2IB8hysbxJq0Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			lW1OEGWm10tmDyTUGKrMa6Xq9aN68Um9WbNLe7+7l/c=
+			1uRxooVQLvue40Z7uV9GQXZMizvr6DGcvsqi1JEy+EU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -269,11 +359,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			veRBKylPegYUhg6ifKgoe05BJU8=
+			DuVGksp89KYVC7xJ/3VFG/eM9Xk=
 			</data>
 			<key>hash2</key>
 			<data>
-			iFyn8ihzugTIDZ45cJS4RKrlr7MVJXEGO+p/OSYBVBQ=
+			V7W7MlB6hFmIlKAmhLaEfZ7HcLQsYrGjwX6J1WCuRHc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -282,11 +372,24 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AbNXwEAIfZEjhto3Amd7el8MdLg=
+			rCuB9jbtoaMJQsZesi4iCqLRuNM=
 			</data>
 			<key>hash2</key>
 			<data>
-			j6PGlrvnl5o62v9UCUWmNnL+alwb8OFMMtdMB3Leec0=
+			a6Kyps5eWvMWY0KftRo01wdtWGjkbxVqXfCz65Q6770=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/trR-f8-nKZ-view-JeR-f8-i1N.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			55gLphJrZA6Q+nZoUuXDR9apqoA=
+			</data>
+			<key>hash2</key>
+			<data>
+			Om9sp4IfCFlju8xtEySahwVyu53EGSYUmPTPvImO3xU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -295,11 +398,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2DYr+rv6abrHMeuBpS+A/dGO/Aw=
+			BNsy0E8FGh+o6y3WehA5uBllHTw=
 			</data>
 			<key>hash2</key>
 			<data>
-			aHYkaKCcORYUdh+4HqUMeEblcVEcUKBi/REg5TWpIDY=
+			foEx94oYVvD0U6G4OblE1f9zY3EyZy95mhsX4k5W/pM=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>

@@ -8,10 +8,15 @@
 
 #import "PhotoViewController.h"
 #import "CollectionViewCell.h"
-
+#import <MobileCoreServices/UTCoreTypes.h>
+#import "GSFEAlbumListVC.h"
+#import "GSFEImageCollectionListVC.h"
+#import "GSFEImageCollectionViewCell.h"
 @interface PhotoViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *ChoosenImageView;
-
+@property (nonatomic, strong) NSArray *imageDataArray;
+@property (nonatomic, strong) NSArray *imageNameArray;
+@property (nonatomic, strong) NSArray *imageMimeTypes;
 @end
 
 @implementation PhotoViewController
@@ -19,7 +24,7 @@
 - (void)viewDidLoad {
 
     
-      UINib *cellNib = [UINib nibWithNibName:@"CollectionViewCell" bundle:[NSBundle mainBundle]];
+    UINib *cellNib = [UINib nibWithNibName:@"CollectionViewCell" bundle:[NSBundle mainBundle]];
     [self.CollectionView registerNib:cellNib forCellWithReuseIdentifier:@"PhotoCell"];
 
     self.CollectionView.delegate=self;
@@ -43,7 +48,6 @@
     else
         _ChoosenImageView.backgroundColor=[UIColor blackColor];
 
-        
     [super viewWillAppear:YES];
 }
 - (void)didReceiveMemoryWarning {
@@ -56,7 +60,7 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 12;
+    return self.imageDataArray.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -66,7 +70,7 @@
     CollectionViewCell *cell= (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     cell.backgroundColor=[UIColor whiteColor];
     cell.imageView.backgroundColor=[UIColor grayColor];
-    cell.imageView.image=self.ChoosenImageView.image;
+    cell.imageView.image=[UIImage imageWithData:self.imageDataArray[indexPath.row]];
     return cell;
 }
 -(IBAction)selectPhotoGalery:(id)sender
@@ -77,7 +81,13 @@
             [self showImagePickerForSourceType:UIImagePickerControllerSourceTypeCamera];
             break;
         case 2:
-            [self showImagePickerForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+          //  [self showImagePickerForSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            if([GSFEAlbumListVC isImageSourcePhotoLibraryAvailableAndAllowed]) {
+                GSFEAlbumListVC *imageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AlbumListVC"];
+                imageViewController.delegate = self;
+                UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:imageViewController];
+                [self presentViewController:navController animated:YES completion:nil];
+            }
             break;
         default:
             break;
@@ -89,6 +99,8 @@
     imagePicker.delegate=self;
     imagePicker.allowsEditing=YES;
     imagePicker.sourceType=sourceType;
+    //imagePicker.mediaTypes = @[(NSString *)kUTTypeMovie];
+    //imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
     [self presentViewController:imagePicker animated:YES completion:nil];
     
 }
@@ -112,6 +124,56 @@
     _ChoosenImageView.backgroundColor=[UIColor blackColor];
 
 }
+//- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+//    if ([identifier isEqualToString:@"CollectionList"]) {
+//        if ([sender isKindOfClass:[UITableViewCell class]]) {
+//            if ([(ALAssetsGroup *)[self.albumArray objectAtIndex:[[self.tableView indexPathForCell:(GSFEAlbumCell *)sender] row]] numberOfAssets] > 0) {
+//                return YES;
+//            }
+//        }
+//    }
+//    return NO;
+//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    
+    if([GSFEAlbumListVC isImageSourcePhotoLibraryAvailableAndAllowed]) {
+        GSFEAlbumListVC *imageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AlbumListVC"];
+        imageViewController.delegate = self;
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:imageViewController];
+        [self presentViewController:navController animated:YES completion:nil];
+    }
+}
+
+#pragma mark - check for permission
++ (BOOL)isImageSourcePhotoLibraryAvailableAndAllowed {
+    
+    ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
+    if (status == ALAuthorizationStatusDenied || status == ALAuthorizationStatusRestricted) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Open the settings and check that this app is enabled under Privacy > Photos." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    }
+    
+    BOOL val =  (status == ALAuthorizationStatusAuthorized || status == ALAuthorizationStatusNotDetermined);
+    return val;
+}
+- (void)imagePickerController:(GSFEAlbumListVC *)picker didFinishPickingMediaWithFiles:(NSArray *)images fileNames:(NSArray *)fileNames mimeTypes:(NSArray *)mimeTypes{
+    
+    //dismiss modal view
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    self.imageDataArray = [NSArray arrayWithArray:images];
+    self.imageNameArray = [NSArray arrayWithArray:fileNames];
+    self.imageMimeTypes = [NSArray arrayWithArray:mimeTypes];
+    [self.CollectionView reloadData];
+}
+
+- (void)imagePickerControllerDidCancel:(GSFEAlbumListVC *)picker error:(NSError *)error{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    if (error) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+    }
+}
+
 /*
 #pragma mark - Navigation
 
